@@ -1,40 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+OICT Full-stack Application
 
-## Getting Started
+Project Overview
 
-First, run the development server:
+This is a full-stack web application developed for an OICT task. It uses Next.js for both the frontend and backend, integrating authentication and various endpoints. The application includes features such as checking the status and validity of cards and displaying points of sale on a map.
 
-```bash
+Tech Stack
+
+Frontend: Next.js, React, Tailwind CSS, TypeScript
+Backend: Next.js API Routes, Node.js
+Map: Leaflet, React-Leaflet
+Authentication: Basic Authentication
+Installation
+
+Prerequisites
+Node.js (v14 or higher)
+npm (v6 or higher)
+Steps to Set Up the Project
+Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/HonzaPenicka/oict.git
+cd your-project
+Install dependencies:
+
+bash
+Copy code
+npm install
+Set up Tailwind CSS:
+Tailwind CSS is already configured in this project. You can find the configuration in tailwind.config.js and styles/globals.css.
+
+Install Leaflet and React-Leaflet:
+
+bash
+Copy code
+npm install leaflet react-leaflet
+Add Leaflet CSS to styles/globals.css:
+
+css
+Copy code
+@import url('https://unpkg.com/leaflet@1.7.1/dist/leaflet.css');
+
+.leaflet-container {
+height: 100%;
+width: 100%;
+}
+Usage
+
+Run the development server
+To start the development server, run:
+
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This will start the application at http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Navigate to the following pages to test the application:
+Home: http://localhost:3000
+Login: http://localhost:3000/login
+Dashboard: http://localhost:3000/dashboard
+Points of Sale: http://localhost:3000/points-of-sale
+Project Structure
+lua
+Copy code
+your-project-name/
+├── node_modules/
+├── pages/
+│ ├── api/
+│ │ ├── status.ts
+│ │ ├── secure-status.ts
+│ │ ├── card/
+│ │ │ ├── [id]/
+│ │ │ │ ├── validity.ts
+│ │ │ │ ├── state.ts
+│ │ ├── auth.ts
+│ ├── login.tsx
+│ ├── dashboard.tsx
+│ ├── points-of-sale.tsx
+│ ├── index.tsx
+├── public/
+│ ├── images/
+│ ├── favicon.ico
+├── styles/
+│ ├── globals.css
+│ ├── Home.module.css
+├── components/
+│ ├── Navbar.tsx
+│ ├── Footer.tsx
+│ ├── Map.tsx
+├── .gitignore
+├── README.md
+├── package.json
+├── tsconfig.json
+├── tailwind.config.js
+├── postcss.config.js
+├── next-env.d.ts
