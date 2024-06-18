@@ -60,38 +60,3 @@ Home: http://localhost:3000
 Login: http://localhost:3000/login
 Dashboard: http://localhost:3000/dashboard
 Points of Sale: http://localhost:3000/points-of-sale
-Project Structure
-lua
-Copy code
-your-project-name/
-├── node_modules/
-├── pages/
-│ ├── api/
-│ │ ├── status.ts
-│ │ ├── secure-status.ts
-│ │ ├── card/
-│ │ │ ├── [id]/
-│ │ │ │ ├── validity.ts
-│ │ │ │ ├── state.ts
-│ │ ├── auth.ts
-│ ├── login.tsx
-│ ├── dashboard.tsx
-│ ├── points-of-sale.tsx
-│ ├── index.tsx
-├── public/
-│ ├── images/
-│ ├── favicon.ico
-├── styles/
-│ ├── globals.css
-│ ├── Home.module.css
-├── components/
-│ ├── Navbar.tsx
-│ ├── Footer.tsx
-│ ├── Map.tsx
-├── .gitignore
-├── README.md
-├── package.json
-├── tsconfig.json
-├── tailwind.config.js
-├── postcss.config.js
-├── next-env.d.ts
